@@ -6,7 +6,6 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
 } from '@/components/ui/Command'
 import { useState } from 'react'
 
@@ -25,17 +24,16 @@ export default function SearchInput({ options, onSelect }: SearchInputProps) {
         onFocus={() => setIsOpen(true)}
         onBlur={() => setIsOpen(false)}
       />
-      {isOpen && (
-        <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          {options.map((option) => (
-            <CommandItem key={option} onSelect={onSelect}>
-              <span>{option}</span>
-            </CommandItem>
-          ))}
-          <CommandSeparator />
-        </CommandList>
-      )}
+      <CommandList
+        className={`${isOpen ? 'initial' : 'hidden'} transition-all`}
+      >
+        <CommandEmpty>No results found.</CommandEmpty>
+        {options.map((option) => (
+          <CommandItem key={option} onSelect={onSelect}>
+            <span>{option}</span>
+          </CommandItem>
+        ))}
+      </CommandList>
     </Command>
   )
 }
