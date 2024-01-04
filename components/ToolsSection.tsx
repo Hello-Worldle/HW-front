@@ -21,11 +21,17 @@ export default function ToolsSection() {
       <p className='rounded bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-700 via-teal-200 to-neutral-700 bg-clip-text p-2 text-center text-3xl font-bold text-transparent '>
         Hello Worldle
       </p>
-      <Button
-        icon={isDark ? MoonIcon : SunIcon}
-        variant='icon'
-        onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      />
+      {/* Wrapper for UI consistency */}
+      <div className='w-[100px]'>
+        <Button
+          icon={isDark ? SunIcon : MoonIcon}
+          variant='transparent'
+          onClick={() => setTheme(isDark ? 'light' : 'dark')}
+          className='w-50 bg-red'
+        >
+          {isDark ? 'Dark' : 'light'}
+        </Button>
+      </div>
     </div>
   )
 }

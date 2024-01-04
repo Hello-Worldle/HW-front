@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import { ThemeProvider } from '@/lib/theme'
 import ToolsSection from '@/components/ToolsSection'
+import GameBackground from '@/components/GameBackground'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,9 +21,10 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute='class' defaultTheme='dark'>
-          <div className='flex min-h-screen flex-col'>
+          <div className='relative flex min-h-screen flex-col'>
             <ToolsSection />
             {children}
+            <GameBackground />
           </div>
         </ThemeProvider>
       </body>

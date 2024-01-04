@@ -1,4 +1,23 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
+
+// Rotate X utilities
+const rotateX = plugin(({ addUtilities }) => {
+  addUtilities({
+    '.rotate-x-25': {
+      transform: 'rotateX(25deg)',
+    },
+    '.rotate-x-50': {
+      transform: 'rotateX(50deg)',
+    },
+    '.rotate-x-75': {
+      transform: 'rotateX(75deg)',
+    },
+    '.rotate-x-100': {
+      transform: 'rotateX(100deg)',
+    },
+  })
+})
 
 const config: Config = {
   content: [
@@ -102,6 +121,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [rotateX],
+}
+export default config
