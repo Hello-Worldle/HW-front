@@ -82,3 +82,54 @@ body {
     transform: translateY(calc(50% + 28px));
   }
 }
+
+.card-loading-border i {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  padding: 4px;
+  z-index: -1;
+  border-radius: calc(16px);
+}
+
+.card-loading-border i:before {
+  --start: theme(colors.teal.200);
+  --end: theme(colors.blue.400);
+  content: '';
+  display: block;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--start) 0deg,
+    var(--end) 228.75deg,
+    rgba(42, 138, 246, 0) 360deg
+  );
+  box-shadow: 0 0 40px 20px
+    --conic-gradient(
+      from 180deg at 50% 50%,
+      var(--start) 0deg,
+      var(--end) 228.75deg,
+      rgba(42, 138, 246, 0) 360deg
+    );
+  width: calc(100% * 1.41421356237);
+  padding-bottom: calc(100% * 1.41421356237);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: -2;
+  animation: landing_spin 5s linear infinite;
+}
+
+@keyframes landing_spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}

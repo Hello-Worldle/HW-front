@@ -1,8 +1,8 @@
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import SearchInput from '@/components/classic/SearchInput'
 import { useState } from 'react'
-import GameModelSelector from '@/components/home/GameModeSelector'
 
 export default function Home() {
   const [queryClient] = useState(
@@ -20,7 +20,10 @@ export default function Home() {
     <QueryClientProvider client={queryClient}>
       <main className='p-4 md:p-24'>
         <div className='align-center flex'>
-          <GameModelSelector />
+          <SearchInput
+            options={['Elixir', 'Ruby', 'JavaScript', 'Java', 'Python']}
+            onSelect={console.log}
+          />
         </div>
       </main>
     </QueryClientProvider>

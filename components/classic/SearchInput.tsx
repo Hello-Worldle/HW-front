@@ -14,6 +14,7 @@ interface SearchInputProps {
   // eslint-disable-next-line no-unused-vars
   onSelect: (selectedOption: string) => void
 }
+
 export default function SearchInput({ options, onSelect }: SearchInputProps) {
   const [isOpen, setIsOpen] = useState(false)
 

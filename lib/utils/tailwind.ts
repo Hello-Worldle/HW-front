@@ -10,7 +10,7 @@ interface ObjectWithTags {
   tags: string[]
 }
 
-const filterArrayByTerm = (
+export const filterArrayByTerm = (
   array: ObjectWithTags[],
   term: string
 ): ObjectWithTags[] => {
@@ -26,11 +26,7 @@ const filterArrayByTerm = (
 }
 
 // Example usage:
-const data: ObjectWithTags[] = [
-  { name: 'Tony Lima', tags: ['gordo'] },
-  { name: 'Will Luigi', tags: ['gordo'] },
-]
-
-const searchTerm = 'Li'
-const result = filterArrayByTerm(data, searchTerm)
-console.log(result)
+// const data: ObjectWithTags[] = [
+//   { name: 'Tony Lima', tags: ['gordo'] },
+//   { name: 'Will Luigi', tags: ['gordo'] },
+// ]
