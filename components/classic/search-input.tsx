@@ -1,18 +1,16 @@
-'use client'
-
 import {
   Command,
   CommandEmpty,
   CommandInput,
   CommandItem,
   CommandList,
-} from '@/components/ui/Command'
+} from '@/components/ui/command'
 import { useState } from 'react'
 
 interface SearchInputProps {
   options: Array<string>
   // eslint-disable-next-line no-unused-vars
-  onSelect: (selectedOption: string) => void
+  onSelect: (option: string) => void
 }
 
 export default function SearchInput({ options, onSelect }: SearchInputProps) {
@@ -30,7 +28,7 @@ export default function SearchInput({ options, onSelect }: SearchInputProps) {
       >
         <CommandEmpty>No results found.</CommandEmpty>
         {options.map((option) => (
-          <CommandItem key={option} onSelect={onSelect}>
+          <CommandItem key={option} onSelect={() => onSelect(option)}>
             <span>{option}</span>
           </CommandItem>
         ))}

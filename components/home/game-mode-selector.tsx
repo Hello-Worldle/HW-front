@@ -1,4 +1,4 @@
-import GameCard from './GameCard'
+import GameCard from './game-card'
 
 export default function GameModelSelector() {
   return (
@@ -10,7 +10,7 @@ export default function GameModelSelector() {
 
       <div className='flex w-full flex-wrap justify-center gap-10'>
         <GameCard mode='quote' />
-        <GameCard mode='hello-world' />
+        <GameCard mode='code' />
       </div>
     </div>
   )

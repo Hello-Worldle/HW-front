@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import { ThemeProvider } from '@/lib/theme'
-import ToolsSection from '@/components/ToolsSection'
-import GameBackground from '@/components/GameBackground'
+import ToolsSection from '@/components/tools-section'
+import GameBackground from '@/components/game-background'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -21,7 +21,7 @@ const buttonVariants = cva(
           'active:shadow-destructive-active bg-destructive text-destructive-foreground shadow-destructive hover:bg-destructive-hover active:border-destructive disabled:bg-destructive border-transparent active:border-2',
         icon: 'w-10 px-0 hover:bg-white/20',
         transparent:
-          'border-transparent bg-transparent hover:border-transparent hover:bg-transparent active:bg-transparent',
+          'hover:bg-background/90 active:bg-background/90 border-transparent bg-transparent hover:border-transparent',
       },
       size: {
         small: 'px-3 py-1',

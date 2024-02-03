@@ -1,7 +1,7 @@
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import SearchInput from '@/components/classic/SearchInput'
+import SearchInput from '@/components/classic/search-input'
 import { useState } from 'react'
 
 export default function Home() {

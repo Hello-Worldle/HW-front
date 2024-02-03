@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import { Card } from '../ui/Card'
+import { Card } from '../ui/card'
 import { cn } from '@/lib/utils/tailwind'
 import { useEffect, useState } from 'react'
 

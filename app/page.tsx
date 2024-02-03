@@ -2,7 +2,8 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useState } from 'react'
-import GameModelSelector from '@/components/home/GameModeSelector'
+import GameModelSelector from '@/components/home/game-mode-selector'
+import Footer from '@/components/footer'
 
 export default function Home() {
   const [queryClient] = useState(
@@ -18,11 +19,12 @@ export default function Home() {
   )
   return (
     <QueryClientProvider client={queryClient}>
-      <main className='p-4 md:p-24'>
+      <main className='p-4 md:p-12'>
         <div className='align-center flex'>
           <GameModelSelector />
         </div>
       </main>
+      <Footer />
     </QueryClientProvider>
   )
 }
